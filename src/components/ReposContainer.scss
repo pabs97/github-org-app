@@ -1,0 +1,60 @@
+.repos-section {
+
+  width: 100%;
+  background-color:#aaa;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  &__search {
+    margin: 0.5rem;
+    width: 15rem;
+  }
+
+  &__radio-buttons {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+
+    
+    div {
+      margin-right: 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__container {
+
+    background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+  } 
+  
+  h2 {
+    margin: 0.5rem;
+  }
+}
+
+.repo {
+  background-color: lightsalmon;
+  border: black solid 1px;
+  padding: 0.5rem;
+
+  a {
+    text-decoration: none;
+    color: #111;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .repos-section {
+    width: 80%;    
+    min-width: 30rem;
+    max-width: 60rem;
+  }
+}
