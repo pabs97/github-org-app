@@ -48,8 +48,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 
 ## TODO
-- [x] better state management, to remember whawt repos you were on before
-accessibility
+- [x] better state management, to remember what repos you were on before
 - [ ] more unit tests
 - [x] sorting not working
 tooltips: hover
