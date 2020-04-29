@@ -1,4 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web app allows you to search for repos within a github org, and then see recent commits for the repo.
+This app requires the caching server found here
+It needs to run with https://github.com/pabs97/github-org-api
+Follow the set up instructions there first.
+
+## Setup
+1. This app requires the caching server found here
+It needs to run with https://github.com/pabs97/github-org-api
+Follow the set up instructions there first.
+2. Clone this repo 
+```
+git clone git@github.com:pabs97/github-org-app.git
+```
+3. Install it 
+```
+npm i
+```
+4. Start
+```
+npm start
+```
+
+## Usage
+1. In the browser, visit http://localhost:3000/repos
+2. In the search bar, type in a __valid__ org name such as "Netflix" and click Search
+3. (Optional) sort the results using the radio buttons
+4. Click on one of the resulting repos to see recent commits, this will take you to another view
+5. In the list of recent commits, you can click on the commit hash to see more info externally (github.com)
+
+
 
 ## Available Scripts
 
@@ -17,70 +46,14 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
 
 ## TODO
-better style
-better state management, to remember whawt repos you were on before
+- [x] better state management, to remember whawt repos you were on before
 accessibility
-unit tests
-caching the whole org's repos
-better caching naming
-sorting not working
+- [ ] more unit tests
+- [x] sorting not working
 tooltips: hover
-add some responsiveness to h5 and p
-change the colors a bit
-look into issue where sometimes there is no render
-add a loading message while search is running
-input width
-lower case search results
-sass config file
+- [x] responsive ui changes between desktop and mobile
+- [ ] sometimes there is no render between pages, can be overcome by refreshing
+- [ ] add a loading message while search is running
+- [ ] sass config file
