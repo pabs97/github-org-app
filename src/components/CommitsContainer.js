@@ -10,12 +10,12 @@ const CommitsContainer = (props) => {
   const commits = useCommits(org, repo);
 
   const populateCommits = () => {
-    return commits.map((commit, i) => <Commit key={i} {...commit} org={org} repo={repo} />);
+    return commits.map((commit, i) => <Commit key={i} index={i} {...commit} org={org} repo={repo} />);
   };
 
   return (
     <section className='commits-section'>
-      <h3>Recent commits for {`${org}/${repo}`}</h3>
+      <h1>Recent commits for {`${org}/${repo}`}</h1>
       {populateCommits()}
     </section>
   );

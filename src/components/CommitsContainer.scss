@@ -1,4 +1,5 @@
 .commits-section {
+  margin-top: 1rem;
   background-color:#d9d9d9;
   position: absolute;
   left: 50%;
@@ -23,13 +24,14 @@
 
   p {
     font-size: 0.8rem;
+    margin-top: 0.8rem;
   }
 
   span {
     font-size: 0.7rem;
     margin-right: 1rem;
   }
-  h3 {
+  h2 {
     margin: 0.25rem 0;
   }
 }
@@ -50,9 +52,8 @@
     width: 100%;
   }
   .commit {
-    // margin: 0.125rem 0.25rem;
 
-    h3 {
+    h2 {
       font-size: 0.7rem;
     }
   }

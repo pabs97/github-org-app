@@ -17,4 +17,4 @@ export const useCommits = (owner, repo) => {
   }, [owner, repo]);
 
   return commits;
-}
+};

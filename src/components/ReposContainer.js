@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import Repo from './Repo';
 import { useForm } from '../utils/hooks';
-// import { withLastLocation } from 'react-router-last-location';
 
 import './ReposContainer.scss';
 
@@ -32,7 +31,7 @@ const ReposContainer = (props) => {
     return repos.map((repo, i) => <Repo key={i} {...repo} />);
   };
 
-  const generateTitle = () => {
+  const generateResultsMessage = () => {
     if (repos.length) {
       return `Showing repos for ${submittedInput}`;
     } else if (submittedInput) {
@@ -48,30 +47,25 @@ const ReposContainer = (props) => {
     return SORT_BY.map(({ filter, display }, i) => {
       return (
         <div key={i}>
-          <input type="radio" id={filter} name="drone" value={filter} selected={i === 0} />
+          <input type="radio" id={filter} name={filter} value={filter} selected={i === 0} />
           <label htmlFor={filter}>{display}</label>
         </div>
       );
     });
   };
 
-
-
-  // TODO: add appropriate aria, and test for accessibility
-  // TODO: make sure there is browser caching
-
-  // TODO: can we combine these two forms?
   return (
     <section className='repos-section'>
-      <form onSubmit={handleSubmit} className="repos-section__search-form" title="sort by options">
+      <h1>Github Org Repo Search</h1>
+      <form onSubmit={handleSubmit} className="repos-section__search-form" title="search a repo">
         <input className="repos-section__search-input" ref={inputEl} placeholder='Enter a repo...' type="text" />
         <input className="repos-section__search-submit" type="submit" value="Search" />
       </form>
-      <form className="repos-section__radio-buttons" onChange={handleRadioButtons}>
+      <form id="sortRepos" className="repos-section__radio-buttons" title="sort by options" onChange={handleRadioButtons}>
         {generateSortByRadioButtons()}
       </form>
 
-      <h2>{generateTitle()}</h2>
+      <h2>{generateResultsMessage()}</h2>
       <section className="repos-section__container">
         {populateRepos()}
       </section>

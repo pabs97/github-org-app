@@ -1,20 +1,20 @@
 import React from 'react';
+import formatDate from '../utils/date';
 
 const Commit = (props) => {
-  const { org, repo, sha, commit } = props;
+  const { index, org, repo, sha, commit } = props;
   const commitUrl = `https://github.com/${org}/${repo}/commits/${sha}`;
-
-  // TODO: add a little responsiveness
 
   return (
     <article className='commit'>
-      <h3>
-        <a href={commitUrl} title="view commit on github">
+      <h2>
+        <a href={commitUrl} title="view commit on github" aria-label={`view commit ${index}`}>
           {sha}
         </a>
-      </h3>
+      </h2>
       <span>author: {commit.author.name}</span>
       <span>email: {commit.author.email}</span>
+      <span>date: {formatDate(commit.author.date)}</span>
       <p>{commit.message}</p>
     </article>
   );

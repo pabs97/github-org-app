@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import logo from './logo.svg';
 import './App.css';
 import ReposContainer from './components/ReposContainer';
 import CommitsContainer from './components/CommitsContainer';
