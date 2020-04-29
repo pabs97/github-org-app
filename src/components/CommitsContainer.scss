@@ -1,0 +1,59 @@
+.commits-section {
+  background-color:#d9d9d9;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.commit {
+  background-color: #becde0;
+  border: black solid 1px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.125rem 0;
+
+  a {
+    text-decoration: none;
+    color: #111;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  span {
+    font-size: 0.7rem;
+    margin-right: 1rem;
+  }
+  h3 {
+    margin: 0.25rem 0;
+  }
+}
+
+// desktop
+@media (min-width: 769px) {
+  .commits-section {
+    width: 80%;    
+    min-width: 30rem;
+    max-width: 60rem;
+  }
+}
+
+// mobile
+@media (max-width: 768px) {
+
+  .commits-section{
+    width: 100%;
+  }
+  .commit {
+    // margin: 0.125rem 0.25rem;
+
+    h3 {
+      font-size: 0.7rem;
+    }
+  }
+}

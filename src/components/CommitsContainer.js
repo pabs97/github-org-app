@@ -1,23 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { withLastLocation } from 'react-router-last-location';
+import { useCommits } from '../utils/hooks';
+
+import Commit from './Commit';
+import './CommitsContainer.scss';
 
 const CommitsContainer = (props) => {
+  const { org, repo } = props.match.params;
+  const commits = useCommits(org, repo);
 
-
-  // this.props.match.params.id
-  const { org, repo, blah } = props.match.params;
-
-  useEffect(() => {
-    const [commits, setCommits] = useState([]);
-
-
-  });
-
+  const populateCommits = () => {
+    return commits.map((commit, i) => <Commit key={i} {...commit} org={org} repo={repo} />);
+  };
 
   return (
-    <section>
-      commits container
-      <span>{org}...{repo}...{blah}</span>
+    <section className='commits-section'>
+      <h3>Recent commits for {`${org}/${repo}`}</h3>
+      {populateCommits()}
     </section>
   );
 };

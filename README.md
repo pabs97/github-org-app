@@ -76,3 +76,11 @@ unit tests
 caching the whole org's repos
 better caching naming
 sorting not working
+tooltips: hover
+add some responsiveness to h5 and p
+change the colors a bit
+look into issue where sometimes there is no render
+add a loading message while search is running
+input width
+lower case search results
+sass config file

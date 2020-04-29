@@ -11,3 +11,13 @@ export function getRepos(org, sortkey) {
     });
 }
 
+export function getCommits(owner, repo) {
+  const url = `${endpoint}/commits/${owner}/${repo}`;
+  console.log(url);
+  return fetch(url)
+    .then(response => response.json())
+    .catch((e) => {
+      console.error(e);
+      return [];
+    });
+}
